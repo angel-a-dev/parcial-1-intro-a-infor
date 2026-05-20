@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbería Black Blade - Lima, Peru">
+    <title>Barbería informática</title>
+</head>
+<link href="ESTILOS/estilos.css" rel="stylesheet">
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <img src="IMAGENES/logo.png" alt="Logo Black Blade" class="header-logo">
+        <h1>&#9986; Black Blade</h1>
+        <p>Barbería · Tatuajes · Piercings — Desde 2022</p>
+    </header>
+
+    <!-- NAVEGACION -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Servicios</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#reserva">Reservar</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <h2>Bienvenido al estudio</h2>
+        <p>Somos un estudio integral de estética urbana con más de 4 años de experiencia en cortes de barbería, tatuajes artísticos y piercings profesionales. Nuestros artistas son certificados, apasionados y dedicados a hacer realidad tu visión con los más altos estándares de higiene y calidad.</p>
+        <br>
+        <a href="#reserva" style="background:#c0392b; color:#ffffff;
+        padding:12px 25px; text-decoration:none; border-radius:5px; letter-spacing:2px; text-transform:uppercase;">Reservar Cita</a>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="menu">
+        <h2>Nuestros Servicios</h2>
+
+        <h3 style="text-align:center; color:#4a90d9; margin-bottom:20px; letter-spacing:2px;">✦ Barbería · Tatuajes · Piercings ✦</h3>
+
+        <div class="menu-grid">
+            <article class="plato">
+                <h3>Corte Clásico</h3>
+                <p>Corte de cabello y barba con navaja y tijera. Incluye lavado, secado y estilizado profesional.</p>
+                <p class="precio">S/. 35</p>
+                <img src="IMAGENES/corte2.jpeg" alt="Corte de cabello" style="width:100%; margin-top:15px; border-radius:5px;">
+            </article>
+
+            <article class="plato">
+                <h3>Corte + Barba Completa</h3>
+                <p>Servicio completo: corte, perfilado de barba, afeitado con navaja caliente y productos premium.</p>
+                <p class="precio">S/. 55</p>
+                <img src="IMAGENES/barba.jpeg" alt="Corte y barba" style="width:100%; margin-top:15px; border-radius:5px;">
+            </article>
+
+            <article class="plato">
+                <h3>Tatuaje Personalizado</h3>
+                <p>Diseño a medida con nuestros tatuadores certificados. Materiales esterilizados y tintas de primera calidad.</p>
+                <p class="precio">Desde S/. 100</p>
+                <img src="IMAGENES/tatuaje.jpeg" alt="Tatuaje personalizado" style="width:100%; margin-top:15px; border-radius:5px;">
+            </article>
+
+            <article class="plato">
+                <h3>Piercing Profesional</h3>
+                <p>Piercings en cualquier zona corporal. Realizados con agujas estériles de un solo uso y joyería de titanio.</p>
+                <p class="precio">Desde S/. 60</p>
+                <img src="IMAGENES/piercing.jpeg" alt="Piercing profesional" style="width:100%; margin-top:15px; border-radius:5px;">
+            </article>
+        </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="horarios">
+        <h2>Horarios de Atención</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Mañana</th>
+                    <th>Tarde/Noche</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Lunes a Viernes</td><td>09:00 - 14:00</td><td>16:00 - 21:00</td></tr>
+                <tr><td>Sábado</td><td>09:00 - 15:00</td><td>16:00 - 22:00</td></tr>
+                <tr><td>Domingo</td><td>10:00 - 16:00</td><td>Cerrado</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- RESERVA -->
+    <section id="reserva">
+        <h2>Reservar Cita</h2>
+        <form action="/reservar" method="POST">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Carlos Ríos" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="carlos@email.com" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <select id="hora" name="hora">
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+            </select>
+
+            <label for="servicio">Servicio:</label>
+            <select id="servicio" name="servicio">
+                <option value="corte">Corte Clásico</option>
+                <option value="corte-barba">Corte + Barba Completa</option>
+                <option value="tatuaje">Tatuaje Personalizado</option>
+                <option value="piercing">Piercing Profesional</option>
+            </select>
+
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" max="5" value="1">
+
+            <label for="notas">Notas especiales:</label>
+            <textarea id="notas" name="notas" rows="3" placeholder="Describe tu diseño, zona del piercing, alergias, etc."></textarea>
+
+            <button type="submit" class="btn-reserva">
+                Confirmar Cita
+            </button>
+        </form>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo">
+        <h2>Nuestro Equipo</h2>
+        <div class="equipo-grid">
+
+            <div class="barbero">
+                <img src="IMAGENES/enrry.png" alt="Foto del barbero">
+                <h3>Enrry Cornejo Ramos</h3>
+                <p>Especialista en cortes clásicos y barbas completas</p>
+            </div>
+
+            <div class="barbero">
+                <img src="IMAGENES/oliver.png" alt="Foto del barbero">
+                <h3>Oliver Campos Ruiz</h3>
+                <p>Especialista en piercings profesionales</p>
+            </div>
+
+            <div class="barbero">
+                <img src="IMAGENES/angela.png" alt="Foto del barbero">
+                <h3>Angela Altamirano Rojas</h3>
+                <p>Especialista en tatuajes personalizados</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <p><strong style="color:#ffffff; letter-spacing:3px;">BLACK BLADE STUDIO</strong></p>
+        <p>Av. Benavides 456, Miraflores, Lima - Perú</p>
+        <br>
+        <p>
+            <a href="mailto:info@blackbladestudio.pe">info@blackbladestudio.pe</a>
+            &nbsp;|&nbsp;
+            <a href="tel:+519876543">+51 (1) 987-6543</a>
+        </p>
+        <br>
+        <address>
+            <small>&copy; 2026 Black Blade Studio. Todos los derechos reservados.</small>
+        </address>
+    </footer>
+
+</body>
+</html>
