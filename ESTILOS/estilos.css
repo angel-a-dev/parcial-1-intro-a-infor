@@ -36,7 +36,7 @@ header p {
 
 /* NAVEGACION */
 nav {
-    background: #111111;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
     padding: 0;
     text-align: center;
     position: sticky;
@@ -304,4 +304,17 @@ footer a {
 
 footer a:hover {
     color: #c0392b;
+}
+
+.icono {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    font-weight: bold;
 }
